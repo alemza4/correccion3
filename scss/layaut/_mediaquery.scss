@@ -1,0 +1,141 @@
+
+@media screen and (max-width:1022px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font: size 22px;
+    }
+
+.containerimg {
+    width: 90%;
+    margin-bottom: 50px;
+    align-items: center;
+    P{
+        letter-spacing: 1px;
+        font-size: 18px;
+        overflow: hidden;
+        padding: 30px;
+    }
+  }
+  .container-img {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: 200px;
+  }
+  .contacto{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.contacto-info{
+    background-image: none;
+}
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: left; 
+}
+iframe{
+    width: 80%;
+    height: 40%;
+}
+.conteiner-productos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+}
+@media only screen and (max-width: 800px){
+    .checkbtn{
+        display: block;
+  }
+ul{
+        position: fixed;
+        background: #212F3C;
+        opacity: 0.9;
+        width: 100%;
+        top: 100px;
+        left: -100%;
+        border-radius: 5px;
+        text-align: center;
+        transition: all .5s;
+}
+nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+}
+nav ul li a{
+        font-size: 20px;
+        color:  #efefef;
+}
+#check:checked ~ ul{
+        left:0;
+}
+.pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+} 
+.red-social{
+        margin-left: 35%;
+    
+}
+.containerimg{
+    width: 90%;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.boximg P{
+    text-transform: lowercase;
+    font-weight: bold;
+    width: 100%;
+    height: 80%;
+    font-size: 12px;
+}
+.contacto{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.contacto-info {
+  width: 100%;
+  height: 100%;
+}
+iframe{
+    width: 80%;
+    margin-left: 12%;
+    border-radius: 5px;
+}
+
+}
+@media only screen and (max-width: 586px){
+    .checkbtn{
+        display: block;
+    }
+    .containerimg {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+         padding: 10px;}
+        .boximg img{
+            height: 70%;
+            opacity: 0.3;
+            z-index: 0;
+            position: relative;}
+        .boximg p{
+            font-size: calc(0.3em + 1vw);
+            overflow: hidden;
+            left: 20%;
+            width: 60%;
+            z-index: 1;
+            position: absolute;
+            margin-top: -290px;
+        }
+    }
+    .red-social{
+        margin-left: 28%;
+    }
+
