@@ -3,12 +3,13 @@
     margin: 0;
     list-style: none;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{  
     background-size: cover;
     font-family: "poppins";
-    text-decoration: none;
+    
     width: auto;
     background-image: radial-gradient(circle at 25.49% 45.68%, #ffffff 0, #fffff8 7.14%, #ffffee 14.29%, #ffffe4 21.43%, #ffffd8 28.57%, #ffffcc 35.71%, #f1f9c1 42.86%, #def2b5 50%, #c9ebab 57.14%);
 }
