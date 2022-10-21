@@ -11,18 +11,17 @@ body {
   font-family: "poppins";
   text-decoration: none;
   width: auto;
-  background-color: #E5E7E0;
+  background-image: radial-gradient(circle at 25.49% 45.68%, #ffffff 0, #fffff8 7.14%, #ffffee 14.29%, #ffffe4 21.43%, #ffffd8 28.57%, #ffffcc 35.71%, #f1f9c1 42.86%, #def2b5 50%, #c9ebab 57.14%);
 }
 
 header {
-  background-image: linear-gradient(135deg, #4B7020, #588E2E, #65a624, #d0f2ae);
   height: 100px;
   width: 100%;
 }
 
 .enlace {
   position: absolute;
-  padding: 10px 50px;
+  padding: 8px 50px;
 }
 
 .logo {
@@ -31,24 +30,25 @@ header {
 
 nav ul {
   z-index: 10000;
-  text-align: center;
-  margin-right: 15px;
+  text-align: right;
+  margin-right: 24px;
 }
 nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
-  text-shadow: 2px 2px 4px #212F3C;
+  text-shadow: 3px 3px 4px #212F3C;
 }
 nav ul a {
+  text-decoration: none;
   color: #212F3C;
-  font-size: 18px;
-  padding: 7px 10px;
-  border-radius: 3px;
+  font-size: 20px;
+  padding: 8px 15px;
+  border-radius: 6px;
   text-transform: uppercase;
 }
 nav ul li a.active, nav ul li a:hover {
-  background: #d0f2a4;
+  background: rgba(182, 240, 107, 0.9647058824);
   opacity: 0.7;
   transition: 0.5s;
 }
@@ -68,33 +68,101 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 .slide {
+  width: 90%;
+  margin: auto;
+  box-shadow: 20px 20px 20px #4B7020;
   z-index: 0;
+  margin-top: 30px;
+}
+.slide .carousel-caption {
+  color: #efefef;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 .slide h5 {
   color: #efefef;
   text-shadow: 8px 8px 8px #212F3C;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   justify-content: space-around;
 }
 .slide p {
+  margin-bottom: 70px;
   text-shadow: 8px 8px 8px #212F3C;
-  font-size: 20px;
-  text-align: center;
-  margin-right: 30px;
-  margin-top: 50px;
+  font-size: 22px;
+}
+.slide a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #efefef;
+  margin-right: 25px;
+  background-color: #212F3C;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.slide li {
+  color: #efefef;
+  text-shadow: 8px 8px 8px #212F3C;
+  font-size: 22px;
+}
+
+.carousel-control-prev-icon {
+  background-color: #212F3C;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.carousel-control-next-icon {
+  background-color: #212F3C;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.carousel-indicators {
+  background-color: #212F3C;
+  border-radius: 30px;
+  opacity: 0.8;
+  width: 150px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .slide img {
+  border-radius: 6px;
   height: 25em;
   width: 100%;
 }
 
 h2 {
-  font-size: 2.5em;
+  display: inline block;
+  position: relative;
+  margin-top: 80px;
+  font-size: 1.7em;
   color: #212F3C;
   text-align: center;
-  background-image: linear-gradient(90deg, #4B7020, #588E2E, #65a624, #d0f2ae);
+}
+
+h2::after, h2::before {
+  content: "";
+  background-color: #212F3C;
+  position: absolute;
+  width: 125px;
+  height: 3px;
+  top: 0.6em;
+}
+
+h2::before {
+  left: 30%;
+}
+
+h2::after {
+  right: 30%;
 }
 
 .containerimg {
@@ -408,7 +476,7 @@ iframe {
     padding-left: 20px;
   }
   nav ul li a {
-    font: size 22px;
+    font-size: 22px;
   }
   .containerimg {
     width: 90%;
@@ -465,6 +533,7 @@ iframe {
     transition: all 0.5s;
   }
   nav ul li {
+    text-align: center;
     display: block;
     margin: 50px 0;
     line-height: 30px;

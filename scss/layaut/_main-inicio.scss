@@ -1,30 +1,89 @@
 .slide{
+    width: 90%;
+    margin: auto;
+    box-shadow: 20px 20px 20px #4B7020;
     z-index: 0;
+    margin-top: 30px;
+    .carousel-caption{
+        color:  $color-secundario;
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 20px;}
         h5 {
-            color: #efefef;
+            color: $color-secundario;
             text-shadow: 8px 8px 8px #212F3C;
-            font-size: 3em;
+            font-size: 2em;
             text-align: center;
-            justify-content: space-around;
-            }
+            justify-content: space-around;}
              p { 
+                margin-bottom: 70px;
                 text-shadow: 8px 8px 8px #212F3C;
-                font-size: 20px;
-                text-align: center;
-                margin-right: 30px;
-                margin-top: 50px;
-            }
+                font-size: 22px;}
+                 a{
+                     display: inline-block;
+                     text-decoration: none;
+                     width: 45px;
+                     height: 45px;
+                     line-height: 45px;
+                     color: $color-secundario;
+                     margin-right: 25px;
+                     background-color: $color-titulos;
+                     border-radius: 50%;
+                     opacity: 0.9;}
+                     li{
+                        color: $color-secundario;
+                        text-shadow: 8px 8px 8px #212F3C;
+                        font-size: 22px;
+                     }
+} 
+.carousel-control-prev-icon{
+        background-color: $color-titulos;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+    }
+.carousel-control-next-icon{
+        background-color: $color-titulos;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+}
+.carousel-indicators{
+    background-color: $color-titulos;
+    border-radius: 30px;
+    opacity: 0.8;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+   
 }
 .slide img {
+    border-radius: 6px;
     height: 25em;
     width: 100%;
 }
 h2 {
-    font-size: 2.5em;
-    color: #212F3C;
+    display: inline block;
+    position: relative;
+    margin-top: 80px;
+    font-size: 1.7em;
+    color: $color-titulos;
     text-align: center;
-    background-image: linear-gradient(90deg, #4B7020, #588E2E, #65a624, #d0f2ae);
-  }
+}
+h2::after,h2::before{
+        content: "";
+        background-color: $color-titulos;
+        position: absolute;
+        width: 125px;
+        height: 3px;
+        top: 0.6em;
+    }
+h2::before{
+    left: 30%;
+}
+h2::after{
+    right: 30%;
+}
 .containerimg {
     width: 70%;
     max-width: 1100px;

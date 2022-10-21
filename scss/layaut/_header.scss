@@ -1,35 +1,35 @@
 header{
-    background-image: $degrade2;
     height: 100px;
     width: 100%;
 }
 .enlace{
     position: absolute;
-    padding: 10px 50px;
+    padding: 8px 50px;
 }
 .logo{
     height: 70px;
 }
 nav ul{
     z-index: 10000;
-    text-align: center;
-    margin-right: 15px;
+    text-align: right;
+    margin-right:24px;
 
       li{
         display: inline-block;
         line-height: 80px;
         margin: 0 5px;
-        text-shadow: 2px 2px 4px $color-titulos;
+        text-shadow: 3px 3px 4px $color-titulos;
 }
           a{ 
+            text-decoration: none;
             color: $color-titulos;
-            font-size: 18px;
-            padding: 7px 10px;
-            border-radius: 3px;
+            font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 6px;
             text-transform: uppercase;
         }
             & li a.active, li a:hover{
-                background: #d0f2a4;
+                background: #b6f06bf6;
                 opacity: 0.7;
                 transition: .5s;
         }
