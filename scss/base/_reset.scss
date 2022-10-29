@@ -9,7 +9,11 @@
 body{  
     background-size: cover;
     font-family: "poppins";
-    
     width: auto;
-    background-image: radial-gradient(circle at 25.49% 45.68%, #ffffff 0, #fffff8 7.14%, #ffffee 14.29%, #ffffe4 21.43%, #ffffd8 28.57%, #ffffcc 35.71%, #f1f9c1 42.86%, #def2b5 50%, #c9ebab 57.14%);
+     /* background-color: #ecf0f1; */
+     background: radial-gradient(rgb(23, 219, 23) 3px, transparent 4px), radial-gradient(rgb(164, 224, 125) 3px, transparent 4px), linear-gradient(#fff 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #fff;
+     background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+     color: #000000;
+    
 }

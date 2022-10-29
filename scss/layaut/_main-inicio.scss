@@ -7,126 +7,118 @@ h2 {
     color: $color-titulos;
     text-align: center;
 }
-h2::after,h2::before{
-        content: "";
-        background-color: $color-titulos;
-        position: absolute;
-        width: 125px;
-        height: 3px;
-        top: 0.6em;
-    }
-h2::before{
-    left: 30%;
-}
-h2::after{
-    right: 30%;
+hr{
+    height: 4px;
+    width: 6%;
+   background-color: #B8D944;
+    margin: auto;
+    border-radius: 3px;
 }
 .container-inicio {
+    width: 100%;
+    height: 100%;
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-   .inicio{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 60px;}
-    P{
-        position: relative;
-        font-size:14px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+     p{
+        font-weight: bold;
+        top: 30%;
+        width: 90%;
+        height: 90%;
         text-align: center;
-        color: #212F3C;
-        margin: 10px 0 30px;
-        overflow: hidden;
-        padding: 35px;
+        font-size: 22px;
+        position: absolute;     
     }
 }
 .inicio img {
-           width: 400px;
-           height: 280px;
-           object-fit: cover;
-           border-radius: 5px;
-           box-shadow: 5px 10px 5px #4B7020;
+    border-radius: 50%;
+    margin-left: 10%;
+    width: 70%;
+   height: 70%;
 }
-.container-inicio .inicio p::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #def2b5 50%;
-    border-radius: 10px;
-    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
-    transform: translateX(-101%);
-}
-.container-inicio .inicio p::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
-    transform: translateX(0);
-}
-
-.container-inicio .inicio p:nth-of-type(1)::before,
-.container-inicio .inicio p:nth-of-type(1)::after{
-    animation-delay: 1s;
-}
-
-.container-inicio .inicio p:nth-of-type(2)::before,
-.container-inicio .inicio p:nth-of-type(2)::after{
-    animation-delay: 1.5s;
-}
-
-@keyframes a-ltr-after{
-    0% {transform: translateX(-100%)}
-    100% {transform: translateX(101%)}
-}
-
-@keyframes a-ltr-before{
-    0% {transform: translateX(0)}
-    100% {transform: translateX(200%)}
-}   
 .titulo h3{
     text-align: center;
     margin-top: 50px;
-    font-size: 1.5em;
-    
-
+    font-size: 2em;
 }
 .conteiner-servicios{
     justify-content: space-around;
     width: 100%;
     height: 100%;
     display: flex;
+    margin-top: 10%;
     flex-direction: row;
     max-width: 1000px;
     margin: auto;
     .servicio{
         align-items: center;
         margin-top: 5%;
-        padding:80px;
+        padding:70px;
     }
     .serv{
         margin-top: 20px;
         text-align: center;
         text-decoration: none;
-        color: #212F3C;
+        color: $color-titulos;
         overflow: hidden;
         h3{
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
         }
              p{
-               font-size:13px;
-
+               width:200px ;
+               font-size:18px;
              }   
 }
 .servicio img{
+    margin-left: 18%;
     width: 130px;
     height: 130px;
     border-radius: 50%;
 }
+}
+.produccion{
+    background-image: url(../imagen/fondo.jpg);
+    opacity: 0.9;
+    height: 400px;
+    width: 100%;
+    margin-top: 50px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 0;
+    h6{
+        color: $color-secundario;
+        font-size: 2em;
+        text-align: center;
+        font-weight: bolder;
+        z-index: 1;
+        
+        }
+        p{
+        color: $color-secundario;
+        font-size: 20px;
+        text-align: center;
+        font-weight:bolder;
+        z-index: 1;
+        }
+    
+    }
+    .planta{
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+
+.produccion::before{
+    content: "";
+    width: 100%;
+    height: 400px;
+    background-color:#0edd18a8;
+    position: absolute;
+    opacity: 0.6;
+  filter:  alpha(opacity=50);
 }
