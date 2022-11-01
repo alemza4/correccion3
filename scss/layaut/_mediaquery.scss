@@ -5,7 +5,7 @@
   }
   ul{
     position: fixed;
-    background: #212F3C;
+    background:$color-titulos;
     opacity: 0.9;
     width: 100%;
     top: 100px;
@@ -22,7 +22,7 @@ nav ul li{
 }
 nav ul li a{
     font-size: 20px;
-    color:  #efefef;
+    color: $color-secundario;
 }
 #check:checked ~ ul{
     left:0;
@@ -53,7 +53,8 @@ hr{
         align-items: center;
         margin-top: 5%;
         padding:10px;
-    }
+}
+}
     .serv{
         color: $color-titulos;
         overflow: hidden;
@@ -76,8 +77,31 @@ hr{
     width: 200px;
     height: 200px;
 }
-}
 
+.conteiner-productos{
+    width: 75%;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 15px;
+     margin-top: 8%;
+}
+     figure {
+         height: 250px;
+         width: 250px;
+        }
+.conteiner-pedido{
+    grid-template-columns: repeat(2, 1fr);
+    height:70%;
+    width: 70%;  
+    .pedido{
+        margin: auto;
+    }
+}
+.conteiner-productos img {
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+    will-change: "transform";
+  }
 .footer-distribuido{
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 150px;
@@ -105,23 +129,6 @@ hr{
     width: 55px;
     height: 35px;}
  }
-.contacto-info{
-    background-image: none;
-}
-.contact-info h4,
-.contact-info ul,
-.contact-info p {
-    text-align: left; 
-}
-iframe{
-    width: 80%;
-    height: 40%;
-}
-.conteiner-productos {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
 }
 @media only screen and (max-width: 800px){
     .inicio p{
@@ -158,27 +165,19 @@ iframe{
     width: 180px;
     height: 180px;
 }
-
-.boximg P{
-    text-transform: lowercase;
-    font-weight: bold;
-    width: 100%;
-    height: 80%;
-    font-size: 12px;
-}
-.contacto{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-.contacto-info {
-  width: 100%;
-  height: 100%;
-}
-iframe{
+.conteiner-productos{
     width: 80%;
-    margin-left: 12%;
-    border-radius: 5px;
+    grid-gap: 5px;
+    .contenedorp{
+        margin: auto;
+    }
+figure {
+    height: 160px;
+    width: 230px;
+   }
+}
+.container-img {
+    grid-gap: 10px;
 }
 }
 @media only screen and (max-width: 586px){
@@ -218,5 +217,21 @@ iframe{
 .produccion::before{
     height: 500px;
 }
+.conteiner-productos{
+     grid-template-columns: repeat(1, 1fr);
+}
+.conteiner-pedido{
+    grid-template-columns: repeat(1, 1fr);
+
+}
+.container-img {
+    grid-template-columns: repeat(1, 1fr);
 }
 
+.container-img .box-img:nth-child(1) {
+    grid-column-start: span 1;
+}
+  .container-img .box-img:nth-child(4) {
+    grid-row-start: span 1;
+}
+}
