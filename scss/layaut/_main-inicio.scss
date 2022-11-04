@@ -8,19 +8,17 @@ h2 {
     text-align: center;
 }
 hr{
-    height: 4px;
-    width: 6%;
-   background-color: #B8D944;
+    height: 6px;
+    width: 40%;
+    background-color: #324001;
     margin: auto;
-    border-radius: 3px;
+    border-radius: 6px;
 }
 .container-inicio {
-    width: 100%;
-    height: 100%;
+    @include parametros (100%,100%,auto);
     max-width: 1000px;
     overflow: hidden;
     position: relative;
-    margin: auto;
      p{
         font-weight: bold;
         top: 30%;
@@ -32,10 +30,9 @@ hr{
     }
 }
 .inicio img {
+    @include parametros (70%,70%,none);
     border-radius: 50%;
     margin-left: 10%;
-    width: 70%;
-   height: 70%;
 }
 .titulo h3{
     text-align: center;
@@ -43,16 +40,11 @@ hr{
     font-size: 2em;
 }
 .conteiner-servicios{
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin-top: 10%;
-    flex-direction: row;
+    @include propiedades-flex (row,center);
+    @include parametros (100%,100%,auto);
+    margin-top: 3%;
     max-width: 1000px;
-    margin: auto;
     .servicio{
-        align-items: center;
         margin-top: 5%;
         padding:70px;
     }
@@ -72,22 +64,19 @@ hr{
              }   
 }
 .servicio img{
+    @include parametros (130px,130px,none);
     margin-left: 18%;
-    width: 130px;
-    height: 130px;
     border-radius: 50%;
 }
 }
 .produccion{
+    @include parametros (100%,400px,none);
+    @include propiedades-flex (column,space-around);
     background-image: url(../imagen/fondo.jpg);
     opacity: 0.9;
-    height: 400px;
-    width: 100%;
     margin-top: 50px;
     background-size: cover;
     position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     z-index: 0;
     h6{
@@ -121,4 +110,62 @@ hr{
     position: absolute;
     opacity: 0.6;
   filter:  alpha(opacity=50);
+}
+.container-card{
+    @include parametros (100%,none,auto);
+	display: flex;
+	max-width: 1100px;
+    margin-top: 5%;
+	
+.card{
+    @extend .container-card;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+    &.card:hover{
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+        transform: translateY(-3%);
+    }
+}
+}
+.card img{
+    @include parametros (100%,200px,none);
+    object-fit: cover;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+ h3{
+	margin-bottom: 15px;
+	color:$colorteriario;
+}
+ p{
+	line-height: 1.8;
+	color: $color-titulos;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+ a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: $color-titulos;
+	border: 1px solid $color-titulos;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+    background: $colorteriario;
+    color: $color-secundario;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover{
+        background: #324001;
+}
+}
 }

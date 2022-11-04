@@ -33,79 +33,90 @@ hr{
     background-color:#698C1C;
 }
 .container-inicio {
-    margin-left: 6%;
+    width: 85%;
+    margin: auto;
+    margin-left:10%;
 }
 .inicio p{
     p{
-        width: 60%;
-        height: 60%;
+        @include parametros (60%,50%,none);
         text-shadow: 20px 20px 20px #B8D944;
     }
 }
 .inicio img{
-    width: 60%;
-    height: 60%;
+    @include parametros (60%,60%,none);
 }
 .conteiner-servicios{
-    flex-direction: column;
+    @include propiedades-grid(repeat(2, 1fr),none,10px);
     .servicio{
-        margin: auto;
+        @include parametros (none,50%,auto);
         align-items: center;
-        margin-top: 5%;
+        margin-top: 10%;
         padding:10px;
 }
 }
     .serv{
+        @include parametros (100%,100%,none);
         color: $color-titulos;
         overflow: hidden;
         h3{
-            background-color: #B8D944;
-            width: 300px;
+            background-color: $colorteriario;
+            width: 200px;
             border-radius: 8px;
             font-size: 28px;
             margin: auto;
+            margin-left: 1%;
         }
              p{
-                padding: 20px;
+                padding: 15px;
                 margin: auto;
-                width:380px ;
                font-size:24px;
              }   
 }
-.servicio img{
-    margin-left: 25%;
-    width: 200px;
-    height: 200px;
-}
 
 .conteiner-productos{
+    @include propiedades-grid(repeat(2, 1fr),none,10px);
     width: 80%;
     margin-right: 5%;
-     grid-template-columns: repeat(2, 1fr);
-     gap: 15px;
      margin-top: 8%;
 }
      figure {
-         height: 250px;
-         width: 250px;
+        @include parametros (250px,250px,none);
         }
 .conteiner-pedido{
-    grid-template-columns: repeat(2, 1fr);
-    height:70%;
-    width: 70%;  
+    @include propiedades-grid(repeat(2, 1fr),none,none);
+    @include parametros (70%,70%,none);  
     .pedido{
         margin: auto;
     }
 }
 .conteiner-productos img {
-    width: 100%;
-    height: 100%;
+    @include parametros (100%,100%,none);
     transition: all 400ms ease-out;
     will-change: "transform";
   }
+  .container-card{
+    margin: auto;
+    margin-top: 5%;
+	width: 85%;
+    flex-direction: column;
+	
+  }
+  .card img{
+    @include parametros (830px,320px,none);
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+ p{
+	font-size: 18px;
+}
+ a{
+    width: 250px;
+}
+}
 .footer-distribuido{
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 150px;
+    @include propiedades-grid(repeat(1, 1fr),150,none);
     }
 
 .footer-distribuido .footer-izq, .footer-distribuido .footer-centro, .footer-distribuido .footer-der {
@@ -131,11 +142,9 @@ hr{
     height: 35px;}
  }
 .container-form{
-    width: 90%;
-    height: 100%;
+    @include propiedades-grid(repeat(1, 1fr),none,50px);
+    @include parametros (90%,100%,none);
     margin-top: 5%;
-    grid-template-columns: repeat(1,1fr);
-    grid-gap: 50px;
     h2{
         font-size: 24px;
         margin: auto;
@@ -167,14 +176,33 @@ iframe{
     height: 350px;
 }
 .caja {
-    width: 90%;
-    height: 90%;
+    @include parametros (70%,90%,60px auto 20px);
+    margin-left: 15%;
 }
 .caja details {
     font-size: 18px;
 }
+.conteiner-consejos{
+    width: 75%;
+    height: 70%;
+.post{
+    max-width: 80rem;
+    flex-direction: column;
 }
-
+.img-post{
+    min-width: 30rem;
+    max-width: 30rem;
+    margin-left: 10%;
+}
+}
+.img-post img{
+    width: 100%;
+    height: 260px;
+}
+.descripcion{
+    font-size: 14px;
+}
+}
 @media only screen and (max-width: 800px){
     .inicio p{
         width: 80%;
@@ -184,10 +212,9 @@ iframe{
 }
 
 .inicio img {
+    @include parametros (450px,auto,none);
         opacity: 0.8;
         margin-left: 18%;
-        width:450px;
-        height: auto;  
         object-fit: cover;
         border-radius: 50%;
 }
@@ -236,7 +263,7 @@ figure {
         .inicio p{
             top: 10%;
             width:90%;
-            font-size:18px; 
+            font-size:16px; 
             margin: auto;
         }
     .inicio img{
@@ -245,9 +272,24 @@ figure {
         margin: auto;
         margin-left: 10%;
     }
+    .conteiner-servicios{
+        display: inline;
+        
+    }
+        .servicio{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+           
+        } 
+        .serv P{
+            font-size: 16px;
+            height: auto; 
+    }
     .servicio img{
-        width: 150px;
-        height: 150px;
+        margin-right: 18%;
+        width: 130px;
+        height: 130px;
     }
     .conteiner-pedido{
         grid-template-columns: repeat(1, 1fr);
@@ -256,13 +298,17 @@ figure {
     }
      
     .footer-distribuido .footer-izq, .footer-distribuido .footer-centro, .footer-distribuido .footer-der {
-        font-size: 20px;
+        font-size: 16px;
+    }
+    i.fa-envelope {
+        font-size: 16px;
+        line-height: 15px;
     }
 
 .produccion{
     height: 500px;
     p{
-        font-size: 18px;
+        font-size: 16px;
         width: 250px;
         height: 300px;
         margin: auto;
@@ -295,9 +341,28 @@ figure {
     font-size: 16px;
 }
 .caja {
-    width: 100%;
+    @include parametros (100%,none,15px auto);
 }
 .caja details {
     font-size: 20px;
+}
+.container-card{
+	width: 70%;
+    
+  }
+  .card{
+    width: 70%;
+	
+}
+.card .contenido-card{
+    margin: auto;
+	padding: 15px;
+	text-align: center;
+ p{
+	font-size: 14px;
+}
+ a{
+    width: 220px;
+}
 }
 }

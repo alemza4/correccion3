@@ -1,13 +1,10 @@
 .container-form{
+    @include parametros (100%,none,auto);
+    @include propiedades-grid (repeat(2,1fr),none,20px);
     background: #212F3C;
 	opacity: 0.9;
     border-radius: 6px;
-    width: 100%;
     max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
     margin-top: 20px;
     margin-bottom: 50px;
  h2{
@@ -32,19 +29,18 @@ form{
     margin-top: 10%;
 }
 iframe{
+    @include parametros (450px,240px,none);
     object-fit: cover;
     border-radius: 6px;
-    width: 450px;
-    height: 240px;
 }
 .container-form a i{
-    color: #B8D944;
+    color: $colorteriario;
 }
 .container-form form .campo, textarea{
     width: 90%;
     padding: 15px 10px;
     font-size: 16px;
-    border: 5px solid #B8D944;
+    border: 5px solid $colorteriario;
     margin-bottom: 20px;
     border-radius: 3px;
     outline: 0px;
@@ -60,7 +56,7 @@ iframe{
     font-size: 16px;
     border: none;
     outline: 0px;
-    background: #B8D944;
+    background: $colorteriario;
     color: $color-secundario;
     border-radius: 6px;
     cursor: pointer;

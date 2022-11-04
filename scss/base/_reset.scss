@@ -1,9 +1,5 @@
 *{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-sizing: border-box;
-    text-decoration: none;
+    @include reset-list(0,0,none,border-box,none);
 }
 
 body{  

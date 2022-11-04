@@ -30,7 +30,7 @@ nav ul{
             text-transform: uppercase;
         }
             & li a.active, li a:hover{
-                background: #b6f06bf6;
+                background: $colorteriario;
                 opacity: 0.7;
                 transition: .5s;
         }

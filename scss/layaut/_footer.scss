@@ -1,11 +1,7 @@
 .footer-distribuido{
-	margin: auto;
-    width: 100%;
-	display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px;
-    grid-gap: 20px;
-	background: #212F3C;
+    @include parametros (100%,none,auto);
+    @include propiedades-grid (repeat(3, 1fr),200px,20px);
+	background:$color-titulos;
 	opacity: 0.9;
  .footer-centro i {
     background-color: #33383b;
@@ -36,7 +32,7 @@
     line-height: 2;
 }
  p a {
-    color: #B8D944;
+    color:$colorteriario;
     text-decoration: none;
     font-weight: bold;
 }
@@ -82,7 +78,7 @@
     line-height: 35px;
     margin-bottom: 5px;
 	&:hover {
-		background-color:#B8D944;
+		background-color:$colorteriario;
 	}
 }
 }

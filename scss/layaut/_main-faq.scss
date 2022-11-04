@@ -1,12 +1,10 @@
 
 .caja {
-    width: 80%;
-    height: 80%;
-    margin: 80px auto;
+  @include parametros (80%,80%,80px auto);
     border-radius: 8px;
     background: $color-titulos;
 	  opacity: 0.9;
-    border: 8px solid #B8D944;
+    border: 8px solid $colorteriario;
      .titulo {
       background:$color-titulos;
          border-radius: 7px 7px 0px 0px;

@@ -9,5 +9,16 @@
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
-    
 }
+@mixin reset-list($margin,$padding,$list,$box,$decoration){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  @mixin parametros($ancho,$tall,$margen){
+    width: $ancho;
+    height: $tall;
+    margin: $margen;
+  }
